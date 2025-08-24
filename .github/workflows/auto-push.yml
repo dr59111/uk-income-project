@@ -1,0 +1,32 @@
+name: Auto Push Workflow
+
+on:
+  workflow_dispatch:   # manual trigger button
+  push:
+    branches:
+      - main           # whenever push happens to main
+
+jobs:
+  auto-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Make a test change
+        run: |
+          echo "Last updated at $(date)" >> reports/auto-update-log.txt
+          mkdir -p reports
+          git add reports/auto-update-log.txt
+          git commit -m "chore: auto-update log" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
