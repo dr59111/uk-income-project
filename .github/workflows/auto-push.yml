@@ -1,0 +1,31 @@
+name: Auto Push Roadmap Files
+
+on:
+  workflow_dispatch: # Manual run button
+
+jobs:
+  add-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Git
+        run: |
+          git config user.name "AI-CoOwner"
+          git config user.email "ai-coowner@example.com"
+
+      - name: Add roadmap + starter files
+        run: |
+          mkdir -p content/youtube content/facebook affiliate ads reports products
+          
+          echo "# UK-Based Income Streams — Roadmap" > ROADMAP.md
+          echo "# Quick Start Checklist" > START_HERE.md
+          echo "# Facebook Post Ideas" > content/facebook-posts.md
+          echo "# YouTube Script — First Video" > content/youtube/first-video.md
+          
+          git add .
+          git commit -m "Add roadmap + starter files"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
