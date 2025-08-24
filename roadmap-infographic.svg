@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <style>
+    .bg{fill:#ffffff}
+    .card{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1;rx:16;ry:16}
+    .title{font:700 40px Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#0b3d91}
+    .h{font:700 24px Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#111827}
+    .txt{font:400 18px Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#374151}
+    .line{stroke:#cbd5e1;stroke-width:2}
+    .badge{fill:#d61f26}
+    .badgeText{font:600 16px Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#ffffff}
+  </style>
+  <rect width="100%" height="100%" class="bg"/>
+  <text x="48" y="72" class="title">UK-Based Income Streams — Roadmap</text>
+  <rect x="1310" y="40" width="220" height="44" rx="10" ry="10" class="badge"/>
+  <text x="1336" y="70" class="badgeText">UK-Focused • Remote</text>
+
+  <!-- Grid of steps -->
+  <g transform="translate(60,120)">
+    <rect width="700" height="150" class="card"/>
+    <text x="20" y="36" class="h">Step 1 — Foundation</text>
+    <text x="20" y="70" class="txt">Shopify/Etsy + UK bank. Create repo with /products, /content, /affiliate, /ads, /reports.</text>
+  </g>
+
+  <g transform="translate(840,120)">
+    <rect width="700" height="150" class="card"/>
+    <text x="20" y="36" class="h">Step 2 — Facebook</text>
+    <text x="20" y="70" class="txt">UK Business Page → link Shop. Post UK lifestyle + product content. Run £3–5/day UK ads.</text>
+  </g>
+
+  <g transform="translate(60,310)">
+    <rect width="700" height="150" class="card"/>
+    <text x="20" y="36" class="h">Step 3 — YouTube</text>
+    <text x="20" y="70" class="txt">UK-targeted channel. 2–3 videos/week. Add affiliate links in descriptions. Monetize.</text>
+  </g>
+
+  <g transform="translate(840,310)">
+    <rect width="700" height="150" class="card"/>
+    <text x="20" y="36" class="h">Step 4 — Affiliates</text>
+    <text x="20" y="70" class="txt">Join Amazon UK + Awin. Store links in /affiliate/links.md. Track results in /reports.</text>
+  </g>
+
+  <g transform="translate(60,500)">
+    <rect width="700" height="150" class="card"/>
+    <text x="20" y="36" class="h">Step 5 — UK Platforms</text>
+    <text x="20" y="70" class="txt">Depop (fashion), NotOnTheHighStreet (gifts), Gumtree (local ads/services testing).</text>
+  </g>
+
+  <g transform="translate(840,500)">
+    <rect width="700" height="150" class="card"/>
+    <text x="20" y="36" class="h">Step 6 — Scale</text>
+    <text x="20" y="70" class="txt">Analyze reports. Double down on winners. Automate posting & expand SKUs.</text>
+  </g>
+
+  <line x1="60" y1="690" x2="1540" y2="690" class="line"/>
+  <text x="60" y="730" class="txt">GitHub keeps everything organized • Save assets & scripts • Use branches/PRs for changes</text>
+  <text x="60" y="765" class="txt">Repo suggestion: uk-income-project</text>
+</svg>
